@@ -12,3 +12,4 @@ focusonnetactive
 removed monocle mode 
 support for laptop multimedia keys 
 added keybinds
+
