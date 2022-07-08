@@ -69,7 +69,7 @@ static const char *downlight[] = { "brightnessctl", "s", "10%-", NULL };
 static const char *noancoare[] = { "firefox", "https://www.youtube.com/watch?v=Z_xp_sHAkq4", NULL };
 static const char *screenturnoff[] = {"xset", "dpms", "force", "off", NULL };
 static const char *switchwin[] = {"dmenu-win", NULL };
-
+static const char *ranger[] = {"st", "ranger", NULL };
 static Key keys[] = {
 	/* modifier         key                           function        argument */
 	{ MODKEY,           XK_o,                         spawn,          {.v = dmenucmd } },
@@ -93,8 +93,9 @@ static Key keys[] = {
         { MODKEY,           XK_equal,                     setgaps,        {.i = +1 } },
         { MODKEY|ShiftMask, XK_equal,                     setgaps,        {.i = 0  } },
         { MODKEY,           XK_w,                         spawn,          {.v = switchwin} },
-        { MODKEY,           XK_r,                         spawn,          {.v = reboot } },
-        { MODKEY,           XK_m,                         spawn,          {.v = noancoare } },       
+        { MODKEY|Shiftmask, XK_r,                         spawn,          {.v = reboot } },
+	{ MODKRY,           XK_r,                         spawn,          {.v = ranger } },
+	{ MODKEY,           XK_m,                         spawn,          {.v = noancoare } },       
 	{ MODKEY,           XK_b,                         togglebar,      {0} },
 	{ MODKEY,           XK_j,                         focusstack,     {.i = +1 } },
 	{ MODKEY,           XK_k,                         focusstack,     {.i = -1 } },
